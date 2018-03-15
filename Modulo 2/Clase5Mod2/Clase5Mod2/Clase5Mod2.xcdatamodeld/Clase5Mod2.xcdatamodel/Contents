@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Plato" representedClassName="Plato" syncable="YES" codeGenerationType="class">
+        <attribute name="fullname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" inverseName="platos" inverseEntity="Usuario" syncable="YES"/>
+    </entity>
+    <entity name="Usuario" representedClassName="Usuario" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="platos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Plato" inverseName="user" inverseEntity="Plato" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Usuario" positionX="-11484" positionY="1269" width="128" height="103"/>
+        <element name="Plato" positionX="-11261" positionY="1269" width="128" height="103"/>
+    </elements>
+</model>
